@@ -25,7 +25,7 @@ LOOP1 VABS.F32 S7, S1;
 	  VMUL.F32 S9,S8,S4;
 	  VADD.F32	s1,s7,s9;
 	  VMUL.F32 S4,s4,s11;
-	  B l1;
+	  B LOOP;
 	  
 stop B stop 
    ENDFUNC
