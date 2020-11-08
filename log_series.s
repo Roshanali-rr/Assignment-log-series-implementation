@@ -9,7 +9,7 @@ __main  FUNCTION
  
     VLDR.F32   s6, = 1
     VLDR.F32   S12, = 1          
-   MOV R11, #0; FOR SWITCHING BETWEEN LOGIC GATES 
+   MOV R11, #2; FOR SWITCHING BETWEEN LOGIC GATES 
    MOV R7,#0 ; INPUT X1
    MOV R8,#1 ; INPUT X2 
    MOV R9,#1; INPUT X3
@@ -36,10 +36,10 @@ LOGIC_OR  CMP R11, #1;
 
 LOGIC_NOT CMP R11, #2;
           BNE LOGIC_NAND;
-          MOV R2, #-3;
+          MOV R2, #-7;
           MOV R4, #2;
     	  MOV R5, #2;	  
-          MOV R6, #-6;
+          MOV R6, #2;
 		   B COMPUTE
 		  
 LOGIC_NAND CMP R11, #3;
