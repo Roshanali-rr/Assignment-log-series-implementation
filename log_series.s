@@ -16,7 +16,7 @@ __main  FUNCTION
     VLDR.F32   S11, = -1
     VLDR.F32   S12, = 1          
 
-   MOV R3,#100;
+   
    MOV R3,#100; N=100 FOR 100 iterations
    MOV R5,#5;
    MOV R6,#0
@@ -27,7 +27,7 @@ LOOP CMP R3,R6
      BGE LOOP1 ; till 100 iterations it will move to LOOP1 and after that it go to STOP
      B stop
 
-LOOP1 ADD R6,R6,#1;
+
 LOOP1 ADD R6,R6,#1; r6 and s6 are incremented after every iteration
       VADD.F32	s6,s6,s12;
       VMUL.F32 S5,S5,S2;
