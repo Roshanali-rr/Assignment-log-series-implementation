@@ -1,16 +1,11 @@
-     AREA     factorial, CODE, READONLY
+     	AREA     appcode, CODE, READONLY
      EXPORT __main
-     IMPORT printMsg
-	 IMPORT printMsg2p
-	 IMPORT printMsg4p
-     ENTRY 
-__main  FUNCTION	
-
- 
-    VLDR.F32   s1, = 5
-    VLDR.F32   s1, = 5 
-    VLDR.F32   s2, = 5
-    VLDR.F32   s5, = 5 
+	 ENTRY 
+__main  FUNCTION		         
+ 	
+    VLDR.F32   s1, = 0.5 
+    VLDR.F32   s2, = 0.5
+    VLDR.F32   s5, = 0.5 
     VLDR.F32   s6, = 1	
     VLDR.F32   S4, = -1
     VLDR.F32   S11, = -1
@@ -23,7 +18,6 @@ __main  FUNCTION
    MOV R6,#0 ; r6 and s6 are used as a counter to count 100 iterations 
 
 LOOP CMP R3,R6
-     BGE LOOP1
      BGE LOOP1 ; till 100 iterations it will move to LOOP1 and after that it go to STOP
      B stop
 
@@ -37,9 +31,7 @@ LOOP1 ADD R6,R6,#1; r6 and s6 are incremented after every iteration
 	  VMOV.F32 S7, S1;
 	  VADD.F32 s1,s7,s9;
 	  VADD.F32 s1,s7,s9; s1 is the ln(1+x) value with x=5
-
 	  B LOOP;
-
 stop B stop 
    ENDFUNC
    END
